@@ -13,7 +13,7 @@ const UseState = ({ name }) => {
     console.log("Empezando un efecto")
 
     if (!!loading) {
-      setError(false);
+      setError(false); //Opción 3
       setTimeout(() => {
         console.log("Realizando la validación")
 
@@ -46,11 +46,15 @@ const UseState = ({ name }) => {
         placeholder="Código de Seguridad"
         value={value}
         onChange={(event) => {
+          //setError(false); //opción 2, este se ejecuta cada vez que el usuario escribe algo
           setValue(event.target.value);
         }}
       />
-      <button onClick={() => setLoading(true)}>Comprobar</button>
-    </div>
+      <button onClick={() => {
+        //setError(false); //opción 1
+        setLoading(true)
+      }}>Comprobar</button>
+    </div >
   );
 }
 
