@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../../App.css';
 
 const SECURITY_CODE = 'paradigma';
 
@@ -85,7 +86,7 @@ const UseState = ({ name }) => {
 
   if (!state.deleted && !state.confirmed) {
     return (
-      <div>
+      <div className='content-useState'>
         <h2>Eliminar UseState {name}</h2>
         <p>Por favor, escribe el código de seguridad</p>
 
@@ -97,24 +98,36 @@ const UseState = ({ name }) => {
           <p>Cargando...</p>
         )}
 
-        <input
-          placeholder="Código de Seguridad"
-          value={state.value}
-          onChange={(event) => {
-            onWrite(event.target.value);
-          }}
-        />
+        <div className='content'>
+          <div className='content-input'>
+            <input
+              placeholder="Código de Seguridad"
+              className='input'
+              value={state.value}
+              onChange={(event) => {
+                onWrite(event.target.value);
+              }}
+            />
+          </div>
 
-        <button onClick={() => {
-          onCheck();
-        }}>Comprobar</button>
-      </div >
+          <div className='content-button'>
+            <button
+              className='button'
+              onClick={() => {
+                onCheck();
+              }}>
+              Comprobar
+            </button>
+          </div>
+        </div>
+      </div>
     );
   } else if (!!state.confirmed && !state.deleted) {
     return (
       <>
         <p>Puede confirmar. ¿Estas seguro?</p>
         <button
+          className='button'
           onClick={() => {
             onDelete();
           }}
@@ -123,6 +136,7 @@ const UseState = ({ name }) => {
         </button>
 
         <button
+          className='button'
           onClick={() => {
             onReset();
           }}
@@ -136,6 +150,7 @@ const UseState = ({ name }) => {
       <>
         <p>Eliminado con éxito</p>
         <button
+          className='button'
           onClick={() => {
             onReset();
           }}
