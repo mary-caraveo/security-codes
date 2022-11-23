@@ -1,4 +1,5 @@
 import React, { useEffect, useReducer } from 'react';
+import '../../App.css';
 
 const SECURITY_CODE = 'paradigma';
 
@@ -48,11 +49,11 @@ const UseReducer = ({ name }) => {
     }
 
     console.log("Terminando el efecto")
-  }, [state.loading]);
+  });
 
   if (!state.deleted && !state.confirmed) {
     return (
-      <div>
+      <div className='content-useReducer'>
         <h2>Eliminar UseState {name}</h2>
         <p>Por favor, escribe el código de seguridad</p>
 
@@ -63,26 +64,41 @@ const UseReducer = ({ name }) => {
         {state.loading && (
           <p>Cargando...</p>
         )}
+        <div className='content'>
+          <div className='content-input'>
+            <input
+              placeholder="Código de Seguridad"
+              className='input'
+              value={state.value}
+              onChange={onWrite} />
+          </div>
 
-        <input
-          placeholder="Código de Seguridad"
-          value={state.value}
-          onChange={onWrite} />
-
-        <button onClick={onCheck}>
-          Comprobar
-        </button>
+          <div className='content-button'>
+            <button
+              className='button'
+              onClick={onCheck}
+            >
+              Comprobar
+            </button>
+          </div>
+        </div>
       </div >
     );
   } else if (!!state.confirmed && !state.deleted) {
     return (
       <>
         <p>Puede confirmar. ¿Estas seguro?</p>
-        <button onClick={onDelete}>
+        <button
+          className='button'
+          onClick={onDelete}
+        >
           Aceptar
         </button>
 
-        <button onClick={onReset}>
+        <button
+          className='button'
+          onClick={onReset}
+        >
           Cancelar
         </button>
       </>
@@ -91,7 +107,10 @@ const UseReducer = ({ name }) => {
     return (
       <>
         <p>Eliminado con éxito</p>
-        <button onClick={onReset}>
+        <button
+          className='button'
+          onClick={onReset}
+        >
           Resetear, volver al inicio
         </button>
       </>

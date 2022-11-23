@@ -18,6 +18,10 @@
   border-bottom: 2px solid #795548;
 }
 
+.content-useReducer {
+  padding: 2rem 0 4rem 0;
+}
+
 .content {
   display: flex;
   flex-direction: row;
