@@ -75,7 +75,7 @@ const UseReducer = ({ name }) => {
 
           <div className='content-button'>
             <button
-              className='button'
+              className='button button-confirm'
               onClick={onCheck}
             >
               Comprobar
@@ -88,31 +88,39 @@ const UseReducer = ({ name }) => {
     return (
       <>
         <p>Puede confirmar. ¿Estas seguro?</p>
-        <button
-          className='button'
-          onClick={onDelete}
-        >
-          Aceptar
-        </button>
+        <div className='content'>
+          <div className='content-btn-delete'>
+            <button
+              className='button button-delete'
+              onClick={onDelete}
+            >
+              Eliminar
+            </button>
+          </div>
 
-        <button
-          className='button'
-          onClick={onReset}
-        >
-          Cancelar
-        </button>
+          <div className='content-btn-reset'>
+            <button
+              className='button button-cancel'
+              onClick={onReset}
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
       </>
     );
   } else {
     return (
       <>
         <p>Eliminado con éxito</p>
-        <button
-          className='button'
-          onClick={onReset}
-        >
-          Resetear, volver al inicio
-        </button>
+        <div className='content'>
+          <button
+            className='button button-confirm'
+            onClick={onReset}
+          >
+            Resetear, volver al inicio
+          </button>
+        </div>
       </>
     );
   }
