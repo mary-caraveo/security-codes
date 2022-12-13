@@ -126,7 +126,7 @@ const UseState = ({ name }) => {
     return (
       <>
         <p>Puede confirmar. ¿Estas seguro?</p>
-        <div className='content'>
+        <div className='content content-useState'>
           <div className='content-btn-delete'>
             <button
               className='button button-delete'
@@ -155,7 +155,7 @@ const UseState = ({ name }) => {
     return (
       <>
         <p>Eliminado con éxito</p>
-        <div className='content'>
+        <div className='content content-useState'>
           <button
             className='button button-confirm'
             onClick={() => {
