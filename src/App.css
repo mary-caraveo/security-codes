@@ -63,3 +63,17 @@
 .content-btn-delete {
   padding-right: 1.5rem;
 }
+
+.content-loading {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.loading-- {
+  display: flex;
+  color: #009688;
+  font-size: 2rem;
+  width: 2rem;
+  height: 3rem;
+}

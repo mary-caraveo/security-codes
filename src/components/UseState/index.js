@@ -95,7 +95,11 @@ const UseState = ({ name }) => {
         )}
 
         {state.loading && (
-          <p>Cargando...</p>
+          <div className='content-loading'>
+            <div className='loading--'>°</div>
+            <div className='loading--'>°</div>
+            <div className='loading--'>°</div>
+          </div>
         )}
 
         <div className='content'>
