@@ -129,7 +129,7 @@ const UseState = ({ name }) => {
   } else if (!!state.confirmed && !state.deleted) {
     return (
       <>
-        <p>Puede confirmar. ¿Estas seguro?</p>
+        <p>Es necesario confirmar la eliminación.</p>
         <div className='content content-useState'>
           <div className='content-btn-delete'>
             <button
