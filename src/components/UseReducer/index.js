@@ -58,7 +58,7 @@ const UseReducer = ({ name }) => {
         <p>Por favor, escribe el código de seguridad</p>
 
         {(state.error && !state.loading) && (
-          <p>Error: el código es incorrecto</p>
+          <p className='text-error'>El código es incorrecto, intenta nuevamente.</p>
         )}
 
         {state.loading && (

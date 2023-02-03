@@ -47,7 +47,7 @@ class ClassState extends React.Component {
         <p>Por favor, escribe el código de seguridad</p>
 
         {(this.state.error && !this.state.loading) && (
-          <p>Error: el código es incorrecto</p>
+          <p className='text-error'>El código es incorrecto, intenta nuevamente.</p>
         )}
 
         {this.state.loading && (

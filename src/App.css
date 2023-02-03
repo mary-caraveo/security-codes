@@ -126,3 +126,7 @@
     transform: scale(1);
   }
 }
+
+.text-error {
+  color: #eb1d36;
+}
