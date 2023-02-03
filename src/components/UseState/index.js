@@ -158,7 +158,7 @@ const UseState = ({ name }) => {
   } else {
     return (
       <>
-        <p>Eliminado con éxito</p>
+        <p className='text-success'>Se elimino con éxito. ✅</p>
         <div className='content content-useState'>
           <button
             className='button button-confirm'

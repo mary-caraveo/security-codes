@@ -130,3 +130,8 @@
 .text-error {
   color: #eb1d36;
 }
+
+.text-success {
+  color: #0a9b8d;
+  font-weight: 400;
+}
